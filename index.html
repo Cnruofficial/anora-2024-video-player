@@ -2,32 +2,48 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>PlayerJS Example</title>
+  <title>Адаптивный PlayerJS</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background: #000;
-      height: 100vh;
+      height: 100%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
+    /* Контейнер, сохраняющий пропорции 16:9 */
+    .player-wrapper {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Сам плеер */
     #player {
-      width: 720px;
-      height: 405px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <div id="player"></div>
+  <div class="player-wrapper">
+    <div id="player"></div>
+  </div>
 
   <script src="playerjs.js"></script>
   <script>
     var player = new Playerjs({
       id: "player",
-      file: "https://pixeldrain.com/api/file/WKgtGoCU?dowloand"
+      file: "https://pixeldrain.com/api/file/WKgtGoCU?download"
     });
   </script>
 
