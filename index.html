@@ -39,14 +39,14 @@
     }
 
     .plyr__control {
-      background: linear-gradient(135deg, #ff3b3b, #b31212) !important;
+      background: linear-gradient(135deg, #ff0000, #000000) !important;
       border: none !important;
       transition: transform 0.2s, background 0.2s;
     }
 
     .plyr__control:hover {
       transform: scale(1.1);
-      background: linear-gradient(135deg, #ff6666, #e63939) !important;
+      background: linear-gradient(135deg, #ff3333, #333333) !important;
     }
 
     .plyr--full-ui.plyr--fullscreen {
@@ -74,110 +74,13 @@
     }
 
     .plyr__control--overlaid {
-      background: rgba(255, 59, 59, 0.8) !important;
+      background: rgba(255, 0, 0, 0.8) !important;
       border-radius: 50%;
       padding: 15px;
     }
 
     .plyr__control--overlaid:hover {
-      background: rgba(255, 59, 59, 1) !important;
-    }
-  </style>
-</head>
-<body>
-  <div class="video-container">
-    <video id="player" playsinline controls autoplay>
-      <source src="https://pixeldrain.com/api/file/WKgtGoCU" type="video/mp4" />
-      Ваш браузер не поддерживает HTML5 видео.
-    </video>
-  </div>
-
-  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-  <script src="player.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Видео Плеер</title>
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #1a1a1a;
-      font-family: Arial, sans-serif;
-    }
-
-    .video-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 100vh;
-      background-color: #000;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background-color: #000;
-      display: block;
-    }
-
-    .plyr {
-      border-radius: 10px;
-    }
-
-    .plyr__control {
-      background: linear-gradient(135deg, #ff3b3b, #b31212) !important;
-      border: none !important;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .plyr__control:hover {
-      transform: scale(1.1);
-      background: linear-gradient(135deg, #ff6666, #e63939) !important;
-    }
-
-    .plyr--full-ui.plyr--fullscreen {
-      background: #000;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    :fullscreen .video-container,
-    :-webkit-full-screen .video-container,
-    :-moz-full-screen .video-container,
-    :-ms-fullscreen .video-container {
-      width: 100vw;
-      height: 100vh;
-      border-radius: 0;
-    }
-
-    :fullscreen video,
-    :-webkit-full-screen video,
-    :-moz-full-screen video,
-    :-ms-fullscreen video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: contain;
-    }
-
-    .plyr__control--overlaid {
-      background: rgba(255, 59, 59, 0.8) !important;
-      border-radius: 50%;
-      padding: 15px;
-    }
-
-    .plyr__control--overlaid:hover {
-      background: rgba(255, 59, 59, 1) !important;
+      background: rgba(255, 0, 0, 1) !important;
     }
   </style>
 </head>
