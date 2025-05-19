@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Анора (2024) СМОТРЕТЬБЕСПЛАТНО</title>
   <style>
     html, body {
@@ -13,7 +13,6 @@
       justify-content: center;
       align-items: center;
     }
-
     .player-container {
       width: 95vw;
       max-width: 800px;
@@ -22,7 +21,6 @@
       border-radius: 12px;
       overflow: hidden;
     }
-
     #player {
       width: 100%;
       height: 100%;
@@ -30,18 +28,30 @@
   </style>
 </head>
 <body>
-
   <div class="player-container">
     <div id="player"></div>
   </div>
 
   <script src="playerjs.js"></script>
   <script>
+    function getVideoName() {
+      let path = window.location.pathname; // например "/anora-2024-video-player"
+      if (path.startsWith('/')) path = path.slice(1); // убираем слеш
+      if (!path) return null;
+      return path;
+    }
+
+    let videoName = getVideoName();
+
+    // Если видео в URL нет — подставляем твой оригинальный файл pixeldrain
+    let videoFileUrl = videoName
+      ? `https://cdn.example.com/videos/${videoName}.mp4` // <-- замени на реальный путь к видеофайлам!
+      : "https://pixeldrain.com/api/file/WKgtGoCU?download";
+
     var player = new Playerjs({
       id: "player",
-      file: "https://pixeldrain.com/api/file/WKgtGoCU?download"
+      file: videoFileUrl
     });
   </script>
-
 </body>
 </html>
